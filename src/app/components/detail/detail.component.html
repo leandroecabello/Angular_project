@@ -1,0 +1,21 @@
+<div class="container" *ngIf="project">
+    <article class="content_project">
+        <div class="image" *ngIf="project.image">
+            <img src="{{url + 'get-image/' + project.image}}" *ngIf="project.image">
+        </div>
+        <div class="data">
+            <div class="data-titles">
+                <h2>{{project.name}}</h2>
+                <h3>{{project.description}}</h3>
+            </div>
+            <div class="data-texts">
+                <p>{{project.category}}</p>
+                <p>{{project.langs}}</p>
+            </div>
+            <div class="data-links">
+                <a href="{{project.urlProject}}" target="blanck" *ngIf="project.urlProject">Ver Web</a>
+                <a href="{{project.repoGit}}" target="blanck" *ngIf="project.repoGit">Repositorio Git</a>
+            </div>
+        </div>
+    </article>
+</div> 
